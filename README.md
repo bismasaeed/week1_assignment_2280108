@@ -52,25 +52,7 @@ count = 1 (this is the count of the word "is").
 Since 1 is not greater than maxCount (which is currently 1), maxCount remains 1.
 Now, maxCount = 1.
 
-Third iteration:
-count = 1 (this is the count of the word "a").
-Again, 1 is not greater than maxCount (which is 1), so maxCount remains 1.
-Now, maxCount = 1.
-
-Fourth iteration:
-count = 4 (this is the count of the word "really").
-Since 4 > 1, maxCount is updated to 4.
-Now, maxCount = 4.
-
-Fifth iteration:
-count = 1 (this is the count of the word "cool").
-Since 1 is not greater than maxCount (which is 4), maxCount remains 4.
-Now, maxCount = 4.
-
-Sixth iteration:
-count = 1 (this is the count of the word "experiment").
-Again, 1 is not greater than maxCount (which is 4), so maxCount remains 4.
-Now, maxCount = 4.
+and so on.
 
 Step 5: Find all words that appear with maximum frequency using a for loop
 
