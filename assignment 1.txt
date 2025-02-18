@@ -1,0 +1,40 @@
+void main() {
+  var lst = [
+    "This is a Really really really cool experiment really",
+    "Cute little experiment",
+    "Will it work maybe it will work do you think it will it will"
+  ];
+
+  // convert the selected sentence to lowercase for case insensitive comparison
+  String firstString = lst[1].toLowerCase(); 
+
+  // split the sentence into words
+  List<String> words = firstString.split(' ');
+
+  // create a map to store word counts
+  Map<String, int> wordCount = {};
+
+  // count the occurrences of each word
+  for (String word in words) {
+    wordCount[word] = (wordCount[word] ?? 0) + 1; 
+  }
+
+  // find the maximum frequency using a for loop
+  int maxCount = 0;
+  for (int count in wordCount.values) {
+    if (count > maxCount) {
+      maxCount = count; // update maxCount if a larger count is found
+    }
+  }
+
+  // find all words that appear with maximum frequency using a for loop
+  List<String> mostFrequentWords = [];
+  for (var entry in wordCount.entries) {
+    if (entry.value == maxCount) {
+      mostFrequentWords.add(entry.key); // add word to list if it has max count
+    }
+  }
+
+  // print the most frequent words
+  print("Most frequent words: ${mostFrequentWords.join(', ')} with $maxCount occurrences.");
+}
